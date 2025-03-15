@@ -64,6 +64,6 @@ terraform destroy -auto-approve
 ## 📌 Author
 - **👨‍💻 Erkan Baran**
 - 🌐 [GitHub Profile](https://github.com/ErkanBarann)
-- 🔗 [LinkedIn](https://www.linkedin.com/in/erkanbaran)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/erkan-baran)
 
 💡 *This project helps automate AWS infrastructure provisioning using Terraform, ensuring efficiency, scalability, and reproducibility.* 🚀
