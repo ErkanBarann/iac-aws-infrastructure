@@ -13,8 +13,8 @@ Before deploying the infrastructure, ensure you have:
 
 1️⃣ **Clone the repository:**
 ```sh
-git clone https://github.com/ErkanBarann/terraform-aws-infra-automation.git
-cd terraform-aws-infra-automation
+git clone https://github.com/ErkanBarann/iac-aws-infrastructur.git
+cd iac-aws-infrastructure
 ```
 
 2️⃣ **Initialize Terraform:**

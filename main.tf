@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-1" // Updated to use the us-east-1 region
 }
 
 # VPC Creation
@@ -49,11 +49,11 @@ resource "aws_security_group" "allow_ssh" {
 
 # EC2 Instance Creation
 resource "aws_instance" "web_server" {
-  ami           = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI
-  instance_type = "t2.micro"
+  ami           = "ami-0c02fb55956c7d316" // Updated to a valid AMI ID for us-east-1
+  instance_type = var.instance_type
   subnet_id     = aws_subnet.public_subnet.id
-  security_groups = [aws_security_group.allow_ssh.name]
-  key_name      = "my-key" # Update with your key pair name
+  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+  key_name      = var.key_name
 
   tags = {
     Name = "TerraformEC2"
@@ -62,8 +62,7 @@ resource "aws_instance" "web_server" {
 
 # S3 Bucket Creation
 resource "aws_s3_bucket" "terraform_bucket" {
-  bucket = "my-terraform-aws-bucket"
-  acl    = "private"
+  bucket = "my-terraform-aws-bucket-04212025-unique" // Updated bucket name to make it globally unique
 
   tags = {
     Name = "TerraformS3Bucket"

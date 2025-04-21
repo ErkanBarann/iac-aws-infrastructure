@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "AWS region where resources will be created"
   type        = string
-  default     = "us-east-1"
+  default     = "us-east-2"
 }
 
 variable "vpc_cidr" {
@@ -25,13 +25,13 @@ variable "instance_type" {
 variable "ami_id" {
   description = "Amazon Machine Image ID for EC2 instance"
   type        = string
-  default     = "ami-0c55b159cbfafe1f0" # Amazon Linux 2
+  default     = "ami-0c960bff39f5b1c70" # Updated to a valid AMI ID for us-east-2
 }
 
 variable "key_name" {
   description = "Name of the SSH key pair"
   type        = string
-  default     = "my-key" # Update this with your key pair name
+  default     = "firstpem" # Update this with your key pair name
 }
 
 variable "s3_bucket_name" {
